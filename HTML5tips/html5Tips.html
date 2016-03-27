@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>html5Tips</title>
+	<style>
+	.data_custom:hover { color: transparent; }
+	.data_custom:hover:after {
+	    content: attr(data-hover-response);
+	    color: #000;
+	    float: left;
+	}
+	</style>
+</head>
+<body>
+	<!-- firgure标签 -->
+	<figure>
+		<img src="" alt="IMG" />
+		<figcaption>
+			<p>图片介绍</p>
+		</figcaption>
+	</figure>
+
+
+	<!-- small标签 -->
+	<p>我是p! <small>我是small!</small></p>
+
+
+	<!-- placeholder属性 -->
+	<input type="text" placeholder="我是placeholder!"  />
+
+
+	<!-- 表单必要属性,若空白，表单不能提交 -->
+	<form action="" method="get">
+		<label>姓名:
+			<input placeholder="我是必要属性！" required="required" />
+		</label>
+		<button type="submit">提交</button>
+	</form>
+
+	<!-- 表单email验证 -->
+	<form action="" method="get">
+		<label>E-mail：
+			<input type="email" placeholder="我是一个e-mail" />
+		</label>
+		<button type="submit">提交</button>
+	</form>
+
+	<!-- 表单正则验证 -->
+	<form action="" method="get">
+		<label>ID：
+			<input type="text" placeholder="4-10个字母" pattern="[A-Za-z]{4,10}" />
+		</label>
+		<button type="submit">提交</button>
+	</form>
+
+
+
+	<!-- data添加HTML标签自定义属性 -->
+	<a class="data_custom" data-hover-response="叫你别碰你还碰" href="#">别碰我~ </a>
+</body>
+</html>

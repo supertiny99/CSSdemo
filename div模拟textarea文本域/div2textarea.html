@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>div2textarea</title>
+	<style>
+	.myTextarea{
+		margin: 0 auto;
+		width: 400px;
+		min-height: 120px;
+		max-height: 300px;
+		_height: 120px;
+		word-wrap: break-word; /*允许长单词或者URL地址换行到下行*/
+		border: 1px solid #DDD;
+		overflow-x: hidden;
+		overflow-y: auto;
+		_overflow-y: visible;
+	}
+	.myTextarea2{
+		margin: 20px auto;
+		width: 400px;
+		min-height: 120px;
+		max-height: 300px;
+		_height: 120px;
+		word-wrap: break-word;
+		border: 1px solid #DDD;
+		overflow-x: hidden;
+		overflow-y: auto;
+		_overflow-y: visible;
+		/*CSS控制元素可读写,控制只能输入文本*/
+		user-modify: read-write-plaintext-only; /*read-only,read-write*/
+		-webkit-user-modify: read-write-plaintext-only;
+	}
+	</style>
+</head>
+<body>
+	<textarea></textarea>
+	<!-- 使用H5新属性contenteditable，允许用户标记元素内容包含的任意文本 -->
+	<!-- contenteditable可取的值: true false plaintext-only 等   -webkit-才支持   -->
+	<div class="myTextarea" contenteditable="plaintext-only"></div>
+	<div class="myTextarea2" ></div>
+</body>
+</html>
